@@ -1,0 +1,40 @@
+package ejers1;
+
+public class Division {
+	float [] n=new float[5];
+	
+	void calcular() {
+		for(int i=0;i<5;i++){
+			int aux1, aux2;
+			aux1=(int)(Math.random()*10);
+			aux2=(int)(Math.random()*10);
+			while(aux2>aux1) {
+				aux2=(int)(Math.random()*10);
+			}
+			try {
+			n[i]=aux1/aux2;
+			}
+			catch(ArithmeticException e) {
+				System.out.println(aux1+"/"+aux2+"="+n[i]+" --> No se puede dividir entre 0, se procede a meter otro numero");
+				while(aux2==0) {
+					aux2=(int)(Math.random()*10);}
+				n[i]=aux1/aux2;
+				
+			}
+			visualizar(aux1,aux2,i);
+		}
+	}
+	
+	
+	
+	void visualizar(float aux1,float aux2, int i) {
+		System.out.println(aux1+"/"+aux2+"="+n[i]);
+	}
+	
+	
+	public static void main(String[] args) {
+		Division ob=new Division();
+		ob.calcular();
+	}
+
+}

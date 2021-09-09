@@ -1,0 +1,73 @@
+package animal;
+
+import java.util.Scanner;
+	
+
+public class Animal {
+	protected String nombre;
+	protected int edad;
+	protected Scanner src=new Scanner(System.in);
+	Animal(){
+		
+	}
+	Animal(String nombre,int edad){
+		this.nombre=nombre;
+		this.edad=edad;
+	}
+	
+	public String getNombre() {
+		return nombre;
+	}
+	public void setNombre(String nombre) {
+		this.nombre = nombre;
+	}
+	public int getEdad() {
+		return edad;
+	}
+	public void setEdad(int edad) {
+		this.edad = edad;
+	}
+	void hablar() {
+		System.out.println("Mi nombre es "+nombre+" y tengo "+edad+" años");
+	}
+	void pedirDatos() {
+		
+		System.out.println("Introduce el nombre del animal:");
+		nombre=src.nextLine();
+		System.out.println("Introduce la edad del animal:");
+		edad=src.nextInt();
+		src.nextLine();
+	}
+	
+	class Pajaro extends Animal{
+		protected String clima;
+		Pajaro(){
+			super();
+		}
+		Pajaro(String nombre, int edad,String clima){
+			super(nombre,edad);
+			this.clima=clima;
+		}
+		void hablar() {
+		super.hablar();
+		System.out.println("vive en "+clima);
+		clima=src.nextLine();
+		}
+		void pedirDatos() {
+			super.pedirDatos();
+			System.out.println("A que clima pertenece:");
+			clima=src.nextLine();
+		}
+		
+	}
+	
+	public static void main(String[] args) {
+		Animal an1=new Animal();
+		Pajaro pj1=new Pajaro("juan",12,"tropical");
+		an1.pedirDatos();
+		an1.pedirDatos();
+		
+	
+	}
+
+}

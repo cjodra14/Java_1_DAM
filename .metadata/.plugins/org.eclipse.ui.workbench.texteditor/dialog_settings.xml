@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="org.eclipse.ui.texteditor.GotoLineAction$GotoLineDialog_dialogBounds">
+		<item key="DIALOG_X_ORIGIN" value="489"/>
+		<item key="DIALOG_Y_ORIGIN" value="313"/>
+	</section>
+	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
+		<item key="selection" value="create"/>
+		<item key="casesensitive" value="false"/>
+		<item key="wholeword" value="false"/>
+		<item key="isRegEx" value="false"/>
+		<list key="findhistory">
+			<item value="create"/>
+			<item value="valueOf"/>
+			<item value="frame"/>
+			<item value="Locale"/>
+			<item value="reti"/>
+			<item value="consult"/>
+			<item value="verSaldo"/>
+			<item value="rdo=Math.abs(-8);"/>
+		</list>
+		<list key="replacehistory">
+		</list>
+	</section>
+</section>

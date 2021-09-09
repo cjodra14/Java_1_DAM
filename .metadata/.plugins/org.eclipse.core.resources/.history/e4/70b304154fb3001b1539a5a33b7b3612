@@ -1,0 +1,73 @@
+package grafica;
+
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JTextField;
+
+public class Grafica extends JFrame implements ActionListener {
+	JLabel lblDNI;
+	JLabel lblSalario;
+	JTextField tfDNI;
+	JTextField tfSalario;
+	JButton btnEnviar;
+	
+	Grafica(){
+		setLayout(null);
+		dibujar();
+	}
+	
+	void dibujar() {
+		setBounds(200,200,500,250);
+		setTitle("MODIFICACION DE SALARIOS");
+		setResizable(false);
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		dibujarObjetos();
+		setVisible(true);
+	}
+	
+	void dibujarObjetos() {
+		lblDNI=new JLabel("Introduce el DNI:");
+		lblSalario=new JLabel("Introduce salario:");
+		tfDNI=new JTextField();
+		tfSalario=new JTextField();
+		btnEnviar=new JButton("Enviar");
+		
+		
+		lblDNI.setBounds(5,10,125,25);
+		lblSalario.setBounds(5,45,125,25);
+		tfDNI.setBounds(150,10,125,25);
+		tfSalario.setBounds(150,45,125,25);
+		btnEnviar.setBounds(190,90,75,25);
+		
+		
+		add(lblDNI);
+		add(lblSalario);
+		add(tfDNI);
+		add(tfSalario);
+		add(btnEnviar);
+	}
+	public static void main(String[] args) {
+		Grafica obj=new Grafica();
+	}
+
+	@Override
+	public void actionPerformed(ActionEvent arg0) {
+		// TODO Auto-generated method stub
+		if (arg0.getSource()==tfDNI) {
+			tfDNI.transferFocus();
+		}else if (arg0.getSource()==tfSalario) {
+			tfSalario.transferFocus();
+		}else if(arg0.getSource()==btnEnviar) {
+			
+		}
+		
+		
+	}
+	
+	
+
+}

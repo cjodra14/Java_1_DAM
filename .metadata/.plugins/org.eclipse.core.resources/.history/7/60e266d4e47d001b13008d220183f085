@@ -1,0 +1,48 @@
+package ejers1;
+
+public class Division {
+	int [] n=new int[5];
+	int cont=0;
+	
+	void calcular() {
+		for(int i=0;i<5;i++){
+			int aux1, aux2;
+			aux1=(int)(Math.random()*10);
+			aux2=(int)(Math.random()*10);
+			try {
+			n[i]=aux1/aux2;
+			}
+			catch(ArithmeticException e) {
+				System.out.println("			"+aux1+"			"+aux2+"				Error división por 0");
+				/*otra opcion es hacer:
+				while(aux2==0) {
+					aux2=(int)(Math.random()*10);
+					}
+				n[i]=aux1/aux2;
+				*/
+				i--;
+				
+			}
+			
+			visualizar(aux1,aux2,i);
+			cont++;
+		}
+	}
+	
+	
+	
+	void visualizar(int aux1,int aux2, int i) {
+		if(cont>0) {
+		System.out.println("			"+aux1+"			"+aux2+"				"+n[i]);}else {
+			System.out.println("Primer número: 		"+aux1+" Segundo número: 	"+aux2+" Resultado de la división: 		"+n[i]);
+		}
+		
+	}
+	
+	
+	public static void main(String[] args) {
+		Division ob=new Division();
+		ob.calcular();
+	}
+
+}

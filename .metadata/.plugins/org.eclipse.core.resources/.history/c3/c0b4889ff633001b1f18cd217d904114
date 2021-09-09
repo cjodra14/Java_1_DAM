@@ -1,0 +1,27 @@
+package alumnos;
+
+public class Alumno {
+	int numero;
+	String nombre;
+	int telefono;
+	Colegio colegio;
+	
+	Alumno(int n, String nombre, int tel, Colegio colegio){
+		numero=n;
+		this.nombre=nombre;
+		telefono=tel;
+		this.colegio=colegio;
+	}
+	
+	void cambiarTelefono(int tel) {
+		telefono=tel;	
+	}
+	
+	void visualizar() {
+		System.out.println("El alumno: "+nombre+" con telefono: "+telefono);
+		System.out.println("Estudia en el colegio: "+colegio);
+		System.out.println("Teléfono del colegio: "+colegio);
+	}
+	
+
+}
